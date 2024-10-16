@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import logo from "../assets/img/logo.png";
 
-function Header() {
+function Navbar() {
   const [isHiringOpen, setIsHiringOpen] = useState(false);
   const [isVerificationOpen, setIsVerificationOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -23,20 +25,18 @@ function Header() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#">
-              <img
-                src="/src/assets/img/logo.png"
-                alt="Helper4U Logo"
-                className="h- w-28"
-              />
-            </a>
+            <Link to="#">
+              <img src={logo} alt="Helper4U Logo" className="h- w-28" />
+            </Link>
           </div>
-
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 items-center">
-            <a href="#" className="text-gray-700 font-bold hover:text-gray-900">
+            <Link
+              to="#"
+              className="text-gray-700 font-bold hover:text-gray-900"
+            >
               Home
-            </a>
+            </Link>
 
             {/* Hiring Dropdown */}
             <div className="relative">
@@ -60,33 +60,32 @@ function Header() {
                   />
                 </svg>
               </button>
-
               {isHiringOpen && (
                 <div className="absolute mt-2 w-48 rounded-md shadow-lg bg-white z-10">
-                  <a
-                    href="#"
+                  <Link
+                    to='/pages'
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Premium Hiring Service
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    to='/pages/basichiring'
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Basic Hiring Service
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    to='/pages/temporary'
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Temporary Hiring Service
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    to='/pages/elderly'
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Hire for Elderly
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>
@@ -113,31 +112,29 @@ function Header() {
                   />
                 </svg>
               </button>
-
               {isVerificationOpen && (
                 <div className="absolute mt-2 w-48 rounded-md shadow-lg bg-white z-10">
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Verification Type 1
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    to="#"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Verification Type 2
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    to="#"
                     className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                   >
                     Verification Type 2
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>
-
             {/* Login Button */}
             <div>
               <button className="bg-red-500 text-white px-5 py-1 rounded font-bold hover:bg-red-600">
@@ -145,7 +142,6 @@ function Header() {
               </button>
             </div>
           </div>
-
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
@@ -169,13 +165,15 @@ function Header() {
             </button>
           </div>
         </div>
-
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden">
-            <a href="#" className="block px-4 py-2 font-bold text-gray-700 hover:bg-gray-100">
+            <Link
+              to="#"
+              className="block px-4 py-2 font-bold text-gray-700 hover:bg-gray-100"
+            >
               Home
-            </a>
+            </Link>
             <div className="relative">
               <button
                 onClick={toggleHiringDropdown}
@@ -186,30 +184,30 @@ function Header() {
 
               {isHiringOpen && (
                 <div className="pl-4">
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                   >
                     Premium Hiring Service
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    to="#"
                     className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                   >
                     Basic Hiring Service
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    to="#"
                     className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                   >
                     Temporary Hiring Service
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    to="#"
                     className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                   >
                     Hire for Elderly
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>
@@ -223,24 +221,24 @@ function Header() {
 
               {isVerificationOpen && (
                 <div className="pl-4">
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                   >
                     Verification Type 1
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    to="#"
                     className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                   >
                     Verification Type 2
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    to="#"
                     className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                   >
                     Verification Type 2
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>
@@ -255,4 +253,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Navbar;

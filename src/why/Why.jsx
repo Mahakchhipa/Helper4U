@@ -31,7 +31,7 @@ const Details = [
 
 function Why() {
   return (
-    <div className=" text-center py-14  bg-slate-100 ">
+    <div className=" text-center py-14  bg-slate-100  ">
       <h3 className=" text-3xl font-bold py-10 ">Why Choose Us </h3>
 
       <div className=" flex bg-slate-100">
@@ -39,7 +39,7 @@ function Why() {
           return (
             <div
               key={index}
-              className="  w-full flex  border  rounded-lg text-white bg-sky-500 hover:bg-blue-500 cursor-pointer: py-3 mx-8 "
+              className="  w-full flex  border  rounded-lg text-white bg-sky-500 hover:bg-blue-500 hover:transition-all hover:scale-105 cursor-pointer: py-3 mx-8 "
             >
               <div className=" ">
                 <div className=" flex justify-center ">

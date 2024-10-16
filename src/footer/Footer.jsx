@@ -2,10 +2,12 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="grid grid-rows-4">
-      <div className="flex gap-20 justify-evenly py-5 bg-slate-300 ">
+    <div className="grid grid-rows-2">
+      <div className="flex gap-20 justify-evenly py-5  md:bg-slate-300 sm:text-center sm:bg-red-500 sm:grid-cols-2 sm:px-4 md:grid-cols-4 ">
         <div className="leading-8 text-center ">
-          <h3 className="text-xl font-bold py-4">Hiring Services</h3>
+          <h3 className="text-xl font-bold py-4 sm:text-base text-center sm:font-bold">
+            Hiring Services
+          </h3>
           <ul>
             <li>Premium Hiring Service</li>
             <li>Basic Hiring Service</li>
@@ -43,12 +45,12 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div className="px-10 bg-slate-100">
+      {/* <div className="px-10 bg-slate-100">
         <div className="text-lg font-bold text-center py-6">
           <h3>POPULAR CATEGORIES</h3>
         </div>
         <div className="py-8">
-          <div className=" text-sm pb-8 font-bold text-red-500 text-center">
+          <div className=" md:text-base pb-8 md:font-bold sm:text-base sm:font-bold text-red-500 text-center">
             Hire Babysitter-Nanny in Delhi | Hire Babysitter-Nanny in Gurugram |
             Hire Babysitter-Nanny in Noida | Hire Babysitter-Nanny in Mumbai |
             Hire Cook-Chef in Faridabad | Hire Babysitter-Nanny in Thane | Hire
@@ -57,7 +59,7 @@ function Footer() {
             Hire Babysitter-Nanny in Lucknow | Hire Maid-Bai in Bangalore | Hire
             Maid-Bai in Indore
           </div>
-          <div className="text-sm font-bold text-red-500 text-center">
+          <div className="md:text-base pb-8 md:font-bold sm:text-base sm:font-bold text-red-500 text-center sm:justify-center">
             Hire Day Time Babysitter-Nanny in Delhi | Hire Day Time
             Babysitter-Nanny in Gurugram | Hire Day Time Babysitter-Nanny in
             Noida | Hire Day Time Babysitter-Nanny in Mumbai | Hire Day Time
@@ -74,7 +76,7 @@ function Footer() {
         <div className="bg-slate-300 py-4 text-center text-gray-400">
           <p>© Copyright 2014-2024 Helper4U™. All Rights Reserved.</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

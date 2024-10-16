@@ -28,7 +28,7 @@ const Service = () => {
     speed: 1000,
     arrows: false,
     slidesToShow: 5,
-    slidesToScroll: 4,
+    slidesToScroll: 2,
     // autoplay: true, // Correctedkey
     // autoplaySpeed: 2000, // Optional: Set autoplay speed (default is 3000 ms)
   };
@@ -44,9 +44,9 @@ const Service = () => {
             return (
               <div
                 key={index}
-                className="bg-slate-100 flex flex-wrap py-5 w-full  "
+                className="bg-slate-100 flex justify-evenly  py-5 w-full  "
               >
-                <div className="border w-full rounded-md    hover:scale-110 transition-transform duration-300 ease-in-out cursor-pointer">
+                <div className="border w-full rounded-md  hover:scale-110 transition-transform duration-300 ease-in-out cursor-pointer">
                   <div>
                     <img
                       src={item.image}
